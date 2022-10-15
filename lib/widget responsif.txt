@@ -1,0 +1,21 @@
+
+
+
+dalam parameter builder dalam material app ditambah sebuah builder bernama
+ResponsiveWrapper.builder
+ClampingScrollWrapper.builder
+digunakan untuk menentukan breakpoint, kapan aplikasi akan auto scale dan kapan aplikasi akan resize
+
+
+ResponsiveRowColumn digunakan untuk
+untuk mengubah layout row atau column sesuai dengan ukuran breakpoint
+
+Kemudian pada parameter layout, menggunakan widget ResponsiveWrapper.of(context).isSmallerThan(breakpoint) untuk mengecek apakah context lebih kecil dengan break point, kemudian dilakukan percabangan untuk menentukan widget yang dipakai, jika hasilnya true maka akan di return column dan sebaliknya
+
+ResponsiveVisibility digunakan untuk menampilkan sebuah widget dengan menggunakan kondisi apakah context lebih besar dari breakpoint atau tidak, jika nilainya true makan akan ditampilkan sebuah widget dan sebaliknya
+
+ResponsiveValue digunakan untuk mengembalikan sebuah nilai yang didapat jika kondisi context lebih besar dan lebih kecil, widget ini memiliki memiliki sebuah nilai default yang dapat di tentukan
+
+ResponsiveConstraint digunakan untuk mengembalikan sebuah widget container dengan nilai yang sesuai dengan value secara responsif
+
+ResponsiveGridView digunakan untuk gridview responsive.

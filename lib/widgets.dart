@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:responsive_framework/responsive_framework.dart';
 import 'courses_data.dart';
 
 class AppBarTitle extends StatelessWidget {
@@ -51,7 +51,14 @@ class PageHeader extends StatelessWidget {
           'Our Courses',
           textAlign: TextAlign.center,
           style: TextStyle(
-            fontSize: 60,
+            fontSize: ResponsiveValue(
+              context,
+              defaultValue: 60.0,
+              valueWhen: const [
+                Condition.smallerThan(name: MOBILE, value: 40.0),
+                Condition.largerThan(name: TABLET, value: 80.0),
+              ],
+            ).value,
             color: Colors.blueGrey[900],
             fontWeight: FontWeight.w700,
           ),
